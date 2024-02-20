@@ -1,0 +1,17 @@
+vmax = 5
+v_interval = 0.1
+angle_number = 30
+time = 10
+predict_duration: float = 10  # s
+predict_interval: float = 0.2  # s
+car_l = 4.5
+car_w = 1.8
+ped_rad = 0.5
+outside_color = [0, 0, 0]
+yielding_color = [0, 255, 0]
+risky_color = [0, 0, 255]
+safe_color = [255, 0, 0]
+group_color = [0, 127, 127]
+leader_color = [127, 127, 0]
+his_color = [127, 0, 127]
+block_size = 5
