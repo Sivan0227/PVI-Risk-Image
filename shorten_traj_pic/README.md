@@ -1,0 +1,1 @@
+This fold contains schematic representations of abbreviated trajectories, derived via trajectory clipping, and exclusively encompasses elements from the training set.
