@@ -1,0 +1,1 @@
+This fold includes a substantial portion of selected Pedestrian-Vehicle Interaction (PVI) videos. These are numerically labeled in accordance with the Euro-PVI pedestrian identifiers. Notably, identifiers exceeding 10,000 denote test set entries, adjusted by an addition of 10,000 to their original numbers.
