@@ -1,0 +1,1 @@
+This project furnishes a dataset comprising risk images and pedestrian crossing action labels, derived using a comprehensive multi-path risk assessment methodology. The foundational data originates from the Euro-PVI dataset. Moreover, Python code for the algorithm responsible for creating risk images from trajectory data is also made available.
