@@ -20,14 +20,10 @@ group_color = constant.group_color
 leader_color = constant.leader_color
 his_color = constant.his_color
 block_size = constant.block_size
+outside_color = [0, 0, 0]
 
 
 def paint_motion_pic(boundray):
-
-    outside_color = [0, 0, 0]
-    yielding_color = [0, 255, 0]
-    risky_color = [0, 0, 255]
-    safe_color = [255, 0, 0]
 
     x_list = [i * (1 / time) for i in range(-vmax * time, vmax * time + 1, 1)]
     y_list = [i * (1 / time) for i in range(0, vmax * time + 1, 1)]
@@ -81,7 +77,6 @@ def add_color(heading, v, color, pic_array):
     print(heading, math.sin(heading))
     vx = math.sin(heading) * v
     vy = math.cos(heading) * v
-    print('loc', int(vy / (1 / time)), int((vx + vmax) / (1 / time)))
     pic_array = block(
         pic_array, [int(vy / (1 / time)), int((vx + vmax) / (1 / time))], color)
     return pic_array
@@ -96,17 +91,13 @@ def color_block(data, seg_num, idx, pic_array):
     avg_v = data['seg_ped_avg_v'][true_idx]
     group_v = data['seg_group_avg_v'][true_idx]
     leader_v = data['seg_leader_avg_v'][true_idx]
-    print(group_v != np.nan, leader_v != np.nan, group_v, leader_v)
     if data['seg_ped_avg_v'][true_idx] <= vmax:
-        print(3)
         avg_head = head(data['seg_ped_avg_h'][true_idx],
                         data['seg_car_avg_h'][true_idx])
         pic_array = add_color(avg_head, avg_v, his_color, pic_array)
     if group_v != np.nan and group_v <= vmax:
-        print(4)
         pic_array = add_color(group_heading, group_v, group_color, pic_array)
     if leader_v != np.nan and leader_v <= vmax:
-        print(5)
         pic_array = add_color(leader_heading, leader_v,
                               leader_color, pic_array)
     return pic_array
@@ -116,10 +107,8 @@ def add_other_info(pic_array, seg_num, data):
     idx1 = 9  # 1s
     idx2 = 4  # 0.5s
     if seg_num >= idx2:
-        print(1)
         pic_array = color_block(data, seg_num, idx2, pic_array)
     if seg_num >= idx1:
-        print(2)
         pic_array = color_block(data, seg_num, idx1, pic_array)
 
 
@@ -225,7 +214,7 @@ def determine_boundary_v(status_list, angle_idx, yeild_max_v, free_min_v):
                 yeild_max_v = vmax
             free_min_v = vmax
     if yeild_max_v > free_min_v:
-        # 说明2后边有1，真正的2在1后边
+        # means 2 is followed by 1, with the actual 2 positioned after 1
         if status_list[-1] == 1:
             free_min_v = vmax
         else:
@@ -244,7 +233,6 @@ def action_label(ped_info):
     curr_action_list_all_seg = []
     boundray_list_all_seg = []
     for seg_idx in range(seg_num):
-        print("sge:", seg_idx)
         boundray_dict = {}
         for angle_idx in range(angle_number + 1):
             status_list_same_angle = []
