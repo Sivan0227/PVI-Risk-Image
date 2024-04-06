@@ -90,9 +90,9 @@ We establish a relative polar coordinate system in the velocity domain as FCMD t
 
 ![pdf](Figure/FCMD.png)
 
-Let us define a specified pedestrian motion $M_{ped}=[v_{ped},h_{ped}]$, where $v_{ped} $denotes the speed and $h_{ped}$ denotes the heading. The range of $h_{ped}$ is set to be 0-180 degrees to focus on the motions associated with crossing maneuvers.  The $h_{ped}$ is a relative concept determined by the heading of the ego-vehicle to ensure consistency in risk assessment across different scenarios.
+Let us define a specified pedestrian motion $M_{ped}=[v_{ped},h_{ped}]$, where $v_{ped}$ denotes the speed and $h_{ped}$ denotes the heading. The range of $h_{ped}$ is set to be 0-180 degrees to focus on the motions associated with crossing maneuvers.  The $h_{ped}$ is a relative concept determined by the heading of the ego-vehicle to ensure consistency in risk assessment across different scenarios.
 
-We define that when they have the same heading angle, $h_{ped}$ equals 180 degrees. This ensures the ego-vehicle always travels with a heading of 180 degrees. The setting of the maximum speed takes into account scenarios where pedestrians may run. In the dataset used in this study, the highest recorded running speed integrated in a 0.5s interval is around 5m/s. Therefore, we set the range of $v_{ped}$to be 0-5 m/s.
+We define that when they have the same heading angle, $h_{ped}$ equals 180 degrees. This ensures the ego-vehicle always travels with a heading of 180 degrees. The setting of the maximum speed takes into account scenarios where pedestrians may run. In the dataset used in this study, the highest recorded running speed integrated in a 0.5s interval is around 5m/s. Therefore, we set the range of $v_{ped}$ to be 0-5 m/s.
 
 ### Multi-path Collision Checking
 
