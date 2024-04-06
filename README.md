@@ -16,7 +16,7 @@ The raw data originates from the Euro-PVI dataset.
 
 The Euro-PVI comprises 6,177 pedestrians captured across 1,077 dense urban scenes in Brussels and Leuven, Belgium. Trajectory points for pedestrians, cyclists, and the ego-vehicle are recorded in the absolute coordinate system, along with corresponding vehicle perspective images. The data is sampled at a frequency of 10 Hz. Most of the scenes were collected at unsignalized intersections or mid-block sections. It also provides a considerable number of unique scenarios, including group crossings, pedestrian running, and evasive maneuvers with high collision risk.
 
-![pdf](Figure/Euro-PVI.pdf)
+![pdf](Figure/Euro-PVI.png)
 
 We will not provide the raw data. Only processed data with a different data structure is available.
 
@@ -30,7 +30,7 @@ We will not provide the raw data. Only processed data with a different data stru
 
 Due to the lack of intention and action labels, pre-processing procedures including pedestrian filtering, trajectory clipping, and ground truth annotating are processed. 
 
-![pdf](Figure/pre-processing.pdf)
+![pdf](Figure/pre-processing.png)
 
 #### Pedestrian Filtering
 
@@ -88,7 +88,7 @@ All pedestrian feasible crossing paths are described by motions (i.e., velocitie
 
 We establish a relative polar coordinate system in the velocity domain as FCMD to represent the potential motion range of a pedestrian.
 
-![pdf](Figure/FCMD.pdf)
+![pdf](Figure/FCMD.png)
 
 Let us define a specified pedestrian motion $M_ped=[v_{ped},h_{ped}]$, where $v_{ped} $denotes the speed and $h_{ped}$ denotes the heading. The range of $h_{ped}$ is set to be 0-180 degrees to focus on the motions associated with crossing maneuvers.  The $h_{ped}$ is a relative concept determined by the heading of the ego-vehicle to ensure consistency in risk assessment across different scenarios.
 
@@ -98,7 +98,7 @@ We define that when they have the same heading angle, $h_{ped}$ equals 180 degre
 
 Ten-second trajectories with 25 points of vehicles and pedestrians were calculated respectively through the constant acceleration (CA) model and constant velocity (CV) model. The occupied space of the ego-vehicle is a rectangle with a length of 4.8m, and a width of 2m. Pedestrians are depicted as a circle with a radius of 0.5m. Here is a typical instance.
 
-![pdf](Figure/CA.pdf)
+![pdf](Figure/CA.png)
 
 ### Determination of Influential Pedestrians
 
@@ -108,13 +108,13 @@ The potential group refers to the pedestrians around the subject pedestrian whos
 
 A potential leader is an individual who is inside a certain region of interest and in a moving direction close to that of the subject pedestrian. 
 
-![pdf](Figure/Annotation.gif)
+![pdf](Figure/influential.png)
 
 We define $D_{\text{leader}}$ as 3 meters,  $\theta_{\text{leader}}= 20,\Delta\theta=10$.
 
 ### Risk Imaging
 
-![pdf](Figure/risk image.pdf)
+![pdf](Figure/risk image.png)
 
 See all the risk images in `risk_images`
 
