@@ -114,7 +114,7 @@ We define $D_{\text{leader}}$ as 3 meters,  $\theta_{\text{leader}}= 20,\Delta\t
 
 ### Risk Imaging
 
-![pdf](Figure/risk image.png)
+![pdf](Figure/risk image.jpg)
 
 See all the risk images in `risk_images`
 
