@@ -10,6 +10,28 @@ This project furnishes a dataset comprising:
 
 ![pdf](Figure/Annotation.gif)
 
+# Citation
+If you are using our dataset or codes for your development, please cite the following paper:
+```python
+@inproceedings{bhattacharyya2021euro,
+  title={Euro-pvi: Pedestrian vehicle interactions in dense urban centers},
+  author={Bhattacharyya, Apratim and Reino, Daniel Olmeda and Fritz, Mario and Schiele, Bernt},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={6408--6417},
+  year={2021}
+}
+@article{liu2025incorporating,
+  title={Incorporating multi-path risk assessment in transformer-based pedestrian crossing action prediction},
+  author={Liu, Bowen and Li, Meng and Feng, Ruyi and Zhou, Wei and Li, Zhibin},
+  journal={Accident Analysis \& Prevention},
+  volume={215},
+  pages={108002},
+  year={2025},
+  publisher={Elsevier}
+}
+```
+
+
 ## Raw Data:
 
 The raw data originates from the Euro-PVI dataset. 
