@@ -11,7 +11,7 @@ This project furnishes a dataset comprising:
 ![pdf](Figure/Annotation.gif)
 
 # Citation
-If you are using our dataset or codes for your development, please cite the following paper:
+If you are using our dataset or codes for your development, please cite the following papers:
 ```python
 @inproceedings{bhattacharyya2021euro,
   title={Euro-pvi: Pedestrian vehicle interactions in dense urban centers},
